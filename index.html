@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="Portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="./matter.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #1788ae;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: rgb(176, 115, 9);
+    }
+  </style>
+</head>
+
+<body class="bg-[#111] text-white justify-between mx-4 mt-4 font-['nunito'] icon-[mdi-light--home] text-2xl">
+  <section class="flex flex-col justify-between h-screen ">
+    <header class="z-10 flex items-center justify-between w-full px-w-screen-xl mx-auto">
+      <img
+        src="https://media.istockphoto.com/id/1350375018/vector/k-letter-logo-luxury-concept-initial-k-logo-design-golden-monogram-letter-for-company-name.jpg?s=170667a&w=0&k=20&c=u9Tzh-VREKZX5LPdcRpKEDN-vjJXKpfW7d4041Uk2jM="
+        width="100" height="70">
+      <div class="flex gap-6">
+        <i class="fa-regular fa-sun"></i>
+        <div class="hidden"> <i class="fa-regular fa-moon"></i></div>
+        <a href="tel:1234567890"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/1234567890?text=Frontend Developer" target=_blank><i
+            class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </header>
+    <div class="absolute insert-0 hidden md:block" id="wrapper-canvas">
+
+    </div>
+
+    <div class="flex translate-y-1">
+      <div class="px-4 w-full mx-auto">
+        <img
+          class="absolute top-0 left-1/2 -translate-y-1/3 -translate-x-1/2 w-140 pointer-event-none h-auto w-[300pxs] sm:w-[400px] md:w-[550px]"
+          src="" alt="">
+        <h1 class="text-[30px] md:text-[80px] font-['spartan'] relative  left-4 ml-15 pointer-event-none">Khushi</h1>
+        <p
+          class="text-[16px] md:text-4xl font-[Merriweather] relative  my:4 md:mb-8 left-4 italic ml-15 pointer-event-none">
+          Python Full Stack Developer</p>
+        <button data-modal-target="default-modal" data-modal-toggle="default-modal"  class="bg-[#966919] py-2 px-5 rounded relative  ml-15 left-4 font-[16px] bg-gradient-to-r from-[#AE8625] 
+        via-[#E0AA3E] to-[#EOAA3E]  hover:scale-110 ease-in-out duration-200">About Me</button><i
+          class="fa-solid fa-arrow-right group-hover:-right-17 relative hover:scale-130 ease-in-out duration-200"></i>
+      </div>
+
+
+      <ul class="ml-auto space-y-6 text-[#b0b2c3] absolute right-8 icon-[mdi-light--home] text-2xl">
+        <li><a href="https://www.linkedin.com/in/khushi-singh-576315297/" target="_blank"><i
+              class="fa-brands fa-linkedin hover:text-white"></i></a></li>
+        <li><a href="https://x.com/khushi953548289" target="_blank"><i
+              class="fa-brands fa-x-twitter hover:text-white"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-instagram hover:text-white"></i></a></li>
+        <li><a href="mailto:khushikhushi89978@gmail.com" target="_blank"><i
+              class="fa-solid fa-envelope hover:text-white"></i></a></li>
+        <li><a href="https://github.com/khushirajput036" target="_blank"><i
+              class="fa-brands fa-github hover:text-white"></i></a></li>
+      </ul>
+    </div>
+    </div>
+    <!-- MODAL -->
+
+    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden fixed top-0 right-0 left-0 z-50 h-full bg-black bg-opacity-50 flex justify-center items-center w-full">
+      <div class="relative p-4 max-w-7xl w-full h-full md:max-h-full md:max-w-3xl">
+        <!-- Modal content -->
+        <div class="relative bg-gray-800 rounded-lg shadow-lg dark:bg-gray-800 w-full">
+          <!-- Modal header -->
+          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200 w-full">
+            <h3 class="text-xl font-semibold text-white">
+              
+              ABOUT ME
+            </h3>
+            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 
+            rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 
+            dark:hover:text-white" data-modal-hide="default-modal">
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="flex flex-col md:flex-row p-4 md:p-5 space-x-0 md:space-x-4 border-t-2 border-gray-400 w-full">
+            <!-- Left Side: Text -->
+            <div class="w-full pr-0 md:pr-4 border-gray-400 ml-3">
+              <p class="text-base leading-relaxed text-white mb-6">
+                I am a fresher Frontend Developer with a strong grasp of React.js, JavaScript, Bootstrap, HTML, and CSS. Passionate about building responsive, user-friendly web applications.
+              </p>
+              <div class="flex flex-wrap space-x-2 space-y-2 md:space-y-0 items-center">
+                <!-- Horizontal Skills List -->
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6">
+                  <p># HTML & CSS</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6">
+                  <p># Bootstrap</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6">
+                  <p># JavaScript</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6">
+                  <p># React js</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6">
+                  <p># C & C++</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-7 ml-2 pl-6 pr-6">
+                  <p># Python</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6 pl-4 pr-4">
+                  <p># Django</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-4 pl-4 pr-4">
+                  <p># MySQL</p>
+                </div>
+                <div class="text-white border rounded-full m-1 p-2 text-sm mr-6 pl-4 pr-4">
+                  <p># GSAP</p>
+                </div>
+              </div>
+  
+              <p class="text-white mt-4 ml-2 space-x-2 my-4 text-2xl mb-8 mt-6 w-full text-center">
+                PYTHON FULL STACK DEVELOPER
+              </p>
+              
+              <div class="flex flex-wrap justify-between">
+                <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" width="14%">
+                <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" width="14%">
+                <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" width="14%">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" width="14%">
+              </div>
+              <br>
+              <div class="flex flex-wrap justify-between">
+
+                <img src="https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png" width="12%">
+                <img src="https://img.icons8.com/?size=512&id=40670&format=png" width="14%">
+                <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" width="14%">
+                <img src="https://img.icons8.com/color/512/python--v2.png" width="14%">
+              
+              </div>
+                <div class="flex flex-wrap">
+                <img class="ml-50 mt-10" src="https://static-00.iconduck.com/assets.00/django-original-icon-2048x874-iws4p6y8.png" width="20%">
+                <img class="ml-15 mt-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiNlfxDH2kp0esfF62rTRrnQ3spHTbE-HMpw&s" width="20%">
+              </div>
+            </div>
+            <!-- Right Side: Image -->
+            <!-- <div class="w-full md:w-1/2 pl-0 md:pl-4">
+              <img src="https://anuragsinghbam.com/images/coder.svg" alt="Developer" class="h-auto rounded-lg shadow-md" width="80%">
+            </div> -->
+          </div>
+          <!-- Modal footer -->
+        </div>
+      </div>
+    </div>
+  
+    <!-- MODAL -->
+
+
+    
+    <section class="flex justify-center items-center w-full">
+      <button
+        class="bg-gradient-to-r from-[#AE8625] via-[#E0AA3E] to-[#E0AA3E] py-2 px-5 z-10 rounded font-[16px] mx-5 my-10 hover:scale-110 ease-in-out duration-200">
+        Latest Works
+      </button>
+      <i
+        class="fa-solid fa-arrow-right group-hover:-right-17 relative hover:scale-130 ease-in-out duration-200 rotate-90 top-10 -translate-x-28 after:h-18"></i>
+    </section>
+  </section>
+  <section class="max-w-screen-xl mx-auto px-4  relative">
+    <h2 class="text-[40px] font-bold px-4 py-2 bg-[#111] relative z-10  mx-auto text-center text-[#f7ef8a]">
+      Latest Works
+    </h2>
+    <div class="flex gap[80px] items-center mt-12 relative">
+      <div class="h-[2px]  bg-[#c69320] left-1/4 absolute top-1/2 l right-1/2"></div>
+      <div
+        class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 z-10 bg-[black] hover:scale-110 ease-in-out duration-200">
+
+      </div>
+      <a href="#" class="w-full relative group hover:scale-110 ease-in-out duration-200 relative">
+        <span
+          class="flex bg-[#fc815c] group-hover:-top-16 duration-200  py-2 my-10 ease-jump px-4 rounded w-max items-center gap-1 absolute top-5 left-1/3 -translate-x-1/2 after:content-[''] after:w-4 after:h-5 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">Harigurus
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-external-link">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </span>
+
+        <img class="relative [400px]-mr-auto w-100 my-10 -ml-1 drop-shadow-[0_0px_20px_rgba(212,175,55)] "
+          src="https://www.freeiconspng.com/thumbs/laptop-png/laptop-png-8.png" alt="">
+
+      </a>
+      <div class="w-full">
+        <h3 class="text-[#fc815c] font-bold text-4xl ml-15">Harigurus</h3>
+        <span class="text-[#fc815c] text-lg  ml-15">(Event Booking)</span>
+        <p class="text-justify mt-2  ml-15">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quidem numquam quo error atque ipsam
+          iusto nesciunt laborum natus id!
+        </p>
+        <ul class="flex flex-wrap gap-2 mt-2  ml-15">
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex gap[80px] items-center mt-12 relative ml-auto">
+
+
+      <div class="w-full">
+        <h3 class="text-[#ffe578] font-bold text-4xl">Harigurus</h3>
+        <span class="text-[#ffe578] text-lg">(Event Booking)</span>
+        <p class="text-justify mt-2">
+          Lorem ipsum, dolor sit amet consectetur adipisicing<br> elit. Similique quidem numquam quo error atque
+          <br>ipsam
+          iusto nesciunt laborum natus id!
+        </p>
+        <ul class="flex flex-wrap gap-2 mt-2">
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="h-[2px]  bg-[#c69320] left-1/2 absolute top-1/2  right-1/4"></div>
+      <div
+        class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 z-10 bg-[black] hover:scale-110 ease-in-out duration-200">
+
+      </div>
+
+
+
+
+      <a href="#" class="text-black w-full relative group hover:scale-110 ease-in-out duration-200 ml-auto">
+        <span
+          class="flex bg-[#ffe578] group-hover:-top-16 duration-200 my-10 py-2 ease-jump px-4 rounded w-max items-center gap-1 absolute top-5 left-1/2 -translate-x-1/4 after:content-[''] after:w-4 after:h-5 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">Harigurus
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-external-link">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </span>
+        <img class="relative [400px]-mr-[0px] w-100 my-10 ml-auto drop-shadow-[0_0px_20px_rgba(212,175,55)]"
+          src="https://www.freeiconspng.com/thumbs/laptop-png/laptop-png-8.png" alt="">
+
+      </a>
+    </div>
+
+
+
+
+    <div class="w-[2px] absolute bg-[#c69320] top-0 -bottom-0 left-1/2 -translate-x-1/2"></div>
+    <div class="flex gap[80px] items-center mt-12 relative">
+      <div class="h-[2px]  bg-[#c69320] left-1/4 absolute top-1/2 l right-1/2"></div>
+      <div
+        class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 z-10 bg-[black] hover:scale-110 ease-in-out duration-200">
+
+      </div>
+      <a href="#" class="w-full relative group hover:scale-110 ease-in-out duration-200 relative">
+        <span
+          class="flex bg-[#fc815c] group-hover:-top-16 duration-200  py-2 my-10 ease-jump px-4 rounded w-max items-center gap-1 absolute top-5 left-1/3 -translate-x-1/2 after:content-[''] after:w-4 after:h-5 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">Harigurus
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-external-link">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </span>
+
+        <img class="relative [400px]-mr-auto w-100 my-10 -ml-1 drop-shadow-[0_0px_20px_rgba(212,175,55)]"
+          src="https://www.freeiconspng.com/thumbs/laptop-png/laptop-png-8.png" alt="">
+
+      </a>
+      <div class="w-full">
+        <h3 class="text-[#2363ed] font-bold text-4xl ml-15">Harigurus</h3>
+        <span class="text-[#2363ed] text-lg  ml-15">(Event Booking)</span>
+        <p class="text-justify mt-2  ml-15">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quidem numquam quo error atque ipsam
+          iusto nesciunt laborum natus id!
+        </p>
+        <ul class="flex flex-wrap gap-2 mt-2  ml-15">
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex gap[80px] items-center mt-12 relative ml-auto">
+      <div class="w-full">
+        <h3 class="text-[#ffe578] font-bold text-4xl">Harigurus</h3>
+        <span class="text-[#ffe578] text-lg">(Event Booking)</span>
+        <p class="text-justify mt-2">
+          Lorem ipsum, dolor sit amet consectetur adipisicing<br> elit. Similique quidem numquam quo error atque
+          <br>ipsam
+          iusto nesciunt laborum natus id!
+        </p>
+
+        <ul class="flex flex-wrap gap-2 mt-2">
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+          <li class="border rounded-[50px] border-[#999] px-[10px] py-[5px]">
+            #react.js
+          </li>
+        </ul>
+      </div>
+      <div class="h-[2px]  bg-[#c69320] left-1/2 absolute top-1/2  right-1/4"></div>
+      <div
+        class="w-4 h-4 rounded-full border-[3px] border-[#fc815c] absolute left-1/2 -translate-x-1/2 z-10 bg-[black] hover:scale-110 ease-in-out duration-200">
+
+      </div>
+
+
+
+
+      <a href="#" class="text-black w-full relative group hover:scale-110 ease-in-out duration-200 ml-auto">
+        <span
+          class="flex bg-[#ffe578] group-hover:-top-16 duration-200 my-10 py-2 ease-jump px-4 rounded w-max items-center gap-1 absolute top-5 left-1/2 -translate-x-1/4 after:content-[''] after:w-4 after:h-5 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">Harigurus
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-external-link">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </span>
+        <img class="relative [400px]-mr-[0px] w-100 my-10 ml-auto drop-shadow-[0_0px_20px_rgba(212,175,55)]"
+          src="https://www.freeiconspng.com/thumbs/laptop-png/laptop-png-8.png" alt="">
+
+      </a>
+    </div>
+
+  </section>
+
+  <section class="max-w-screen-xl mx-auto   relative border w-110 rounded">
+    <h2
+      class="text-[40px] sm:text-[40px] font-bold px-4 py-2 bg-[#111] relative z-10  mx-auto text-center text-[#f7ef8a]">
+      What my clients are saying ?
+    </h2>
+  </section>
+  <!-- Swiper -->
+  <div class="swiper mySwiper !py-14">
+    <div class="swiper-wrapper items-center">
+      <div class="swiper-slide px-4">
+        <div
+          class="flex items-center shrink-0 flex-col md:flex-row w-full md:max-w-[800px] rounded-lg p-9 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] shadow-[0_0px_50px_rgba(212,175,55)] cursor-grab">
+          <img
+            class="w-[100px] h-[100px] md:w-[180px] md:h-[180px] rounded-full shadow-[0_0px_60px_rgba(59,130,240,0.6)]"
+            src="https://anuragsinghbam.com/images/saatvik.webp" alt="testimonial 3">
+
+          <div class="testimonial-text ml-6 text-left pt-16 relative">
+            <p class="text-sm md:text-base mb-2">
+              “Khushi is a talented, committed individual who will leave no
+              stone unturned in his pursuit to provide with the best. His
+              attention to detail and in-depth experience in the of web
+              development is indeed commendable. He has exhibited exemplary
+              skills in the field, and I hope to see all the great projects
+              coming up!”
+            </p>
+            <h2 class="text-right text-[#d8a444] font-bold text-2xl md:text-4xl">Saatvik Nagpal</h2>
+            <h5 class="text-right text-[#d8a444] text-base md:text-lg">Founder, EazyGrad</h5>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide px-4">
+        <div
+          class="flex items-center flex-col md:flex-row shrink-0 w-full max-w-[800px] rounded-lg p-9 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] shadow-[0_0px_50px_rgba(212,175,55)] cursor-grab">
+          <img
+            class="w-[100px] h-[100px]  md:w-[180px] md:h-[180px] rounded-full shadow-[0_0px_60px_rgba(59,130,240,0.6)]"
+            src="https://anuragsinghbam.com/images/kira.webp" alt="testimonial 3">
+
+          <div class="testimonial-text ml-6 text-left pt-16 relative">
+            <p class="text-sm md:text-base mb-2">
+              Khushi was a wonderful developer to work with! He anticipated
+              everything I need to consider for my website. He also went
+              the extra mile and added details that I hadn't considered! He
+              is helping my business grow, and I will definitely work with
+              him again!”
+            </p>
+            <h2 class="text-right text-[#d8a444] font-bold text-2xl md:text-4xl">Kira Bragg</h2>
+            <h5 class="text-right text-[#d8a444] text-base md:text-lg">English Mentor</h5>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide px-4">
+        <div
+          class="flex items-center flex-col md:flex-row shrink-0 w-full max-w-[800px] rounded-lg p-9 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] shadow-[0_0px_50px_rgba(212,175,55)] cursor-grab">
+          <img
+            class="w-[100px] h-[100px]  md:w-[180px] md:h-[180px] rounded-full shadow-[0_0px_60px_rgba(59,130,240,0.6)]"
+            src="https://anuragsinghbam.com/images/Srihari.webp" alt="testimonial 3">
+
+          <div class="testimonial-text ml-6 text-left pt-16 relative">
+            <p class="text-sm md:text-base mb-2">
+              “Khushi is a talented, committed individual who will leave no
+              stone unturned in his pursuit to provide with the best. His
+              attention to detail and in-depth experience in the of web
+              development is indeed commendable. He has exhibited exemplary
+              skills in the field, and I hope to see all the great projects
+              coming up!”
+            </p>
+            <h2 class="text-right text-[#d8a444] font-bold text-2xl md:text-4xl">Saatvik Nagpal</h2>
+            <h5 class="text-right text-[#d8a444] text-base md:text-lg">Founder, EazyGrad</h5>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide px-4">
+        <div
+          class="flex items-center flex-col md:flex-row shrink-0 w-full max-w-[800px] rounded-lg p-9 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] shadow-[0_0px_50px_rgba(212,175,55)] cursor-grab">
+          <img
+            class="w-[100px] h-[100px]  md:w-[180px] md:h-[180px] rounded-full shadow-[0_0px_60px_rgba(59,130,240,0.6)]"
+            src="https://anuragsinghbam.com/images/saatvik.webp" alt="testimonial 3">
+
+          <div class="testimonial-text ml-6 text-left pt-16 relative">
+            <p class="text-sm md:text-base mb-2">
+              “Khushi is a talented, committed individual who will leave no
+              stone unturned in his pursuit to provide with the best. His
+              attention to detail and in-depth experience in the of web
+              development is indeed commendable. He has exhibited exemplary
+              skills in the field, and I hope to see all the great projects
+              coming up!”
+            </p>
+            <h2 class="text-right text-[#d8a444] font-bold text-2xl md:text-4xl">Saatvik Nagpal</h2>
+            <h5 class="text-right text-[#d8a444] text-base md:text-lg">Founder, EazyGrad</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+  <section class="max-w-screen-xl mx-auto px-4  relative border w-80 rounded">
+    <h2
+      class="text-[40px] sm:text-[40px] font-bold px-4 py-2 bg-[#111] relative z-10  mx-auto text-center text-[#f7ef8a]">
+      Let's Connect
+    </h2>
+  </section>
+  <div class="flex flex-col md:flex-row items-center mt-10">
+    <div class="w-full">
+      <img src="https://anuragsinghbam.com/images/contact-me.svg" alt="">
+    </div>
+
+    <form class="w-full">
+      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 text-white">Name</label>
+      <div class="relative mb-4">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <i class="fa-solid fa-user text-gray-500"></i>
+        </div>
+        <input type="text" id="name" name="name" class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900 text-sm rounded-lg 
+    focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 
+    dark:placeholder-gray-400 dark:text-white" placeholder="Enter your name">
+      </div>
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 text-white">Email</label>
+      <div class="relative mb-4">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor" viewBox="0 0 20 16">
+            <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+            <path
+              d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+          </svg>
+        </div>
+        <input type="text" id="email" name="email" class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900
+         text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 
+          dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="name@khushi.com">
+      </div>
+
+      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 text-white">Messages</label>
+      <div class="relative mb-4">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+
+        </div>
+        <textarea id="message" name="message" rows="8" type="text" id="email-address-icon" class="bg-gray-50 border-2 outline-none border-gray-300 text-gray-900
+     text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700
+      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="">
+      </textarea>
+      </div>
+
+      <button type="submit" class="w-full text-white bg-gradient-to-r from-[#C79B3D] via-[#D4AF37] to-[#B8860B] focus:ring-4 focus:ring-[#1788ae]
+   font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none"> <i
+          class="fa-solid fa-paper-plane"></i>Send Message</button>
+
+    </form>
+  </div>
+
+  <footer class="flex flex-col items-center pb-10">
+    <p class="text-s text-gray-300">Khushi © 2024</p>
+    <div class="black-logo my-4">
+      <img class="w-20"
+        src="https://media.istockphoto.com/id/1350375018/vector/k-letter-logo-luxury-concept-initial-k-logo-design-golden-monogram-letter-for-company-name.jpg?s=170667a&w=0&k=20&c=u9Tzh-VREKZX5LPdcRpKEDN-vjJXKpfW7d4041Uk2jM=">
+
+      <span>To Top</span>
+    </div>
+    <ul class="social-links mx-auto flex gap-6 items-center justify-center">
+      <li class="linkedin-icon">
+        <a href="https://www.linkedin.com/in/khushi-singh-576315297/" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+      </li>
+      <li class="twitter-icon">
+        <a href="https://x.com/khushi953548289" target="_blank"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li class="instagram-icon">
+        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li class="gmail-icon">
+        <a href="mailto:khushikhushi89978@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+      </li>
+      <li class="github-icon">
+        <a href="https://github.com/khushirajput036" target="_blank"><i class="fab fa-github"></i></a>
+      </li>
+    </ul>
+  </footer>
+
+
+  
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+    });
+
+
+    
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+  
+</script>
+<script>
+  
+</script>
+<script src="Portfolio.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+<script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+
+
+</body>
+
+</html>
